@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <script data-require="angular.js@1.5.6" data-semver="1.5.6" src="https://code.angularjs.org/1.5.6/angular.min.js"></script>
+    <script data-require="angular.js@1.5.6" data-semver="1.5.6" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
+    <script data-require="angular.js@1.5.6" data-semver="1.5.6" src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script data-require="angular.js@1.5.6" data-semver="1.5.6" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script data-require="jquery@2.0.0" data-semver="2.0.0" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script data-require="bootstrap@3.1.1" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div ng-controller="watcher" class="form-group">
+      <h1>Angular Watch</h1>
+      <input class = "form-control" type="text" ng-model="name" />
+      <h4>Counter : {{counter}} </h4>
+    </div>
+    <br />
+    <br />
+    <h1>Angular Digest</h1>
+    <div ng-controller="digester">
+      <button id="digest" class = "btn btn-primary">Digest My Scope</button>
+      <h4>Object value : {{obj.value}}</h4>       
+    </div>
+    <br />
+    <br />
+    <div ng-controller="applyer">
+      <h1>Angular Apply</h1>
+      <button ng-click="updateTime()" class = "btn btn-primary">Update Time From Angular</button>
+      <button id="updateTimeButton" class = "btn btn-primary">Update Time</button>
+      <h4>{{datetime | date : 'yyyy-MM-dd HH:mm:ss'}}</h4>
+    </div>
+  </body>
+
+</html>
